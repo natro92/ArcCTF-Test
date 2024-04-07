@@ -1,0 +1,11 @@
+version: '3'
+services:
+  test:
+    build: ./
+    environment:
+      # 仅为测试用flag
+      ARC_FLAG: "ArcCTF{This_is_a_test_flag_4_ArcCTF}"
+    ports:
+      # 设置了暴露端口
+      - 8080:80
+    restart: unless-stopped
